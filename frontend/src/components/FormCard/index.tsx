@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { Movie } from 'types/movie';
 import { BASE_URL } from 'utils/requests';
+import { validateEmail } from 'utils/validate';
 import './style.css';
 
 type Props = {
@@ -20,13 +21,25 @@ function Form( { movieId } : Props) {
             })
     }, [movieId]);
 
+    const handleSumbmit = (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+
+        const email = (event.target as any).email.value;
+
+        const score = (event.target as any).score.value;
+
+        if (!validateEmail) {
+            return;
+        }
+    }
+
     return (
         <div className="dsmovie-form-container">
             <img className="dsmovie-movie-card-image" src={movie?.image} alt={movie?.title} />
             <div className="dsmovie-card-bottom-container">
                 <h3>{movie?.title}</h3>
 
-                <form className="dsmovie-form">
+                <form className="dsmovie-form" onSubmit={handleSumbmit}>
                     <div className="form-group dsmovie-form-group">
                         <label htmlFor="email">Informe seu email</label>
                         <input type="email" className="form-control" id="email" />
