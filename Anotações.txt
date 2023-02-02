@@ -1,0 +1,59 @@
+-----------------------------------------------------
+ANOTAÇÕES:
+-----------------------------------------------------
+
+Bootstrap: é uma framework (estrutura) de CSS que traz layouts prontos para páginas web.
+
+Arrumar Código no VSCode:
+SHIFT + ALT + F
+
+-----------------------------------------------------
+CONDICIONAL TERNÁRIO:
+
+Antes da "?" é a condição
+Se verdadeira, vai fazer o que vem após a "?"
+O to.Fixed(1) arredonda para 1 casa decimal
+Se falsa, realiza o que está após os ":"
+
+var > 0 ? var.toFixed(1) : '-'
+
+-----------------------------------------------------
+
+O Backend vai estar hospedado no Heroku e o Frontend estar hospedado no Netlify.
+
+Importação automática na IDE SPRING TOOL SUITE 4:
+SHIFT + CTRL + O
+
+Banco de Dados H2:
+Banco em memória para fazer testes.
+
+@Entity: Priorizar a Persistence:
+Persistence é especificação
+Hibernate é implementação
+
+Chave Composta:
+A JPA exige que a chave implemente Serializable.
+
+RODAR O PROGRAMA:
+Botão direito no nome do projeto no cando inferior esquerdo -> (Re)start.
+
+OBJETO REPOSITORY:
+Objeto da camada de acesso a dados.
+Vai ter operações para salvar, buscar, deletar, atualizar e outras para acessar o banco de dados.
+
+DATA TRANFER OBJECTS - DTO:
+
+Objeto simples para tranferir dados entre o serviço e o controlador.
+
+Não faz parte do banco de dados.
+
+MOVIE SERVICE:
+Realiza a operação de buscar od filmes.
+
+@Service: identifica um componente do Sistema.
+
+@Autowired: instancia os objetos já criados.
+
+NETLIFY:
+Plataforma para implementar aplicações Front-end.
+-----------------------------------------------------
